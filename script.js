@@ -4,6 +4,8 @@ const amountOfPeople = document.getElementById('amountOfPeople');
 const bill = document.getElementById('bill');
 const tip = document.getElementById('tip');
 const total_amount = document.getElementById('total-amount');
+const btn1 = document.getElementById('btn1');
+const currency = document.getElementById('Currency');
 
 let tipPercent = 0;
 
@@ -42,13 +44,13 @@ function getTip() {
     return;
   }
   tipAmount = ((bill.value * tipPercent) / 100) * 100;
-  total_amount.value = '$' + tipAmount.toFixed(2);
+  total_amount.value = currency.value + tipAmount.toFixed(2);
 
   if (amountOfPeople.value === '') {
-    tip.value = '$' + tipAmount.toFixed(2);
+    tip.value = currency.value + tipAmount.toFixed(2);
   } else {
     let finalTip = tipAmount / Math.round(amountOfPeople.value);
-    tip.value = '$' + finalTip.toFixed(2);
+    tip.value = currency.value + finalTip.toFixed(2);
   }
 }
 function resetCalculator() {

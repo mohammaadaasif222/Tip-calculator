@@ -38,7 +38,13 @@ input[type="number"]{
     width: 100%;
     color:#054f4f !important;
     font-weight: 700;
-
+}
+select{
+    background: #f4fafa;
+    width: 100%;
+    color:#054f4f !important;
+    font-weight: 300;
+    font-size: small !important;
 }
 input:focus, textarea:focus, select:focus , button:focus{
     outline: none;
@@ -58,6 +64,14 @@ input[type="button"]{
 input[type="button"]:hover{
     background: #26c0ab;
     color:#054f4f;
+}
+.changecolor{
+    background: #26c0ab;
+    color:#054f4f;
+}
+.orignal-state{
+    background:#054f4f;
+    color: #FFF;
 }
 input[type="text"]{
     background: rgba(0,73,77,255);
@@ -88,9 +102,14 @@ input[type="text"]{
     color: rgba(21,101,118,255);
     font-size: 13px;
 }
-.left{
-}   
+/* .left{
+}    */
 .right{
     background: rgba(0,73,77,255);
 
-}   
+} 
+@media only screen and (max-width: 600px) {
+   .container{
+    width: 100% !important;
+   }
+  }
