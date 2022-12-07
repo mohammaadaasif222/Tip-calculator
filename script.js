@@ -36,6 +36,9 @@ function five() {
 
 //once calculate button is pressed...
 function getTip() {
+  if(amountOfPeople.value <0 ){
+    alert("Enter valid amount of people")
+  }
   if (bill.value === '' || bill.value == 0) {
     alert('Please Enter Bill Amount');
     return;
